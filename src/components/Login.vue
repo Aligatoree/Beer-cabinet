@@ -30,8 +30,6 @@ export default {
   updated() {
     this.inputEmail = this.email;
     this.inputPassword = this.password;
-    console.log(this.email);
-    console.log(this.password);
   },
   methods: {
     check() {

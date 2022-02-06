@@ -15,7 +15,7 @@
           <p class="page__value">{{ value }}</p>
         </li>
       </ul>
-      <a class="page__button" @click="logOut" href="/">LogOut</a>
+      <button class="page__button" @click="logOut">LogOut</button>
     </div>
   </div>
 </template>
@@ -27,6 +27,8 @@ export default {
   methods: {
     logOut() {
       localStorage.clear();
+
+      this.$router.push("/login");
     },
   },
 };
@@ -47,14 +49,13 @@ export default {
   &__button {
     display: inline-block;
     width: auto;
-    height: 30px;
+    height: auto;
     padding: 10px;
     margin: 0 20px 15px 20px;
 
     text-align: center;
     text-decoration: none;
     @media (max-width: 768px) {
-      height: 20px;
       margin: 0 10px 5px 10px;
     }
   }

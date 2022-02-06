@@ -6,7 +6,7 @@
           <img src="@/assets/logo.png" alt="logo" class="nav__logo" />
         </router-link>
       </div>
-      <div class="nav__profile">
+      <div class="nav__profile" v-if="isAuth">
         <router-link to="/profile" class="nav__profile_link">
           <p class="nav__profile_username">{{ username }}</p>
           <img :src="avatar" alt="" class="nav__profile_avatar" />
@@ -39,11 +39,15 @@ export default {
         email: "",
         password: "",
       },
+      isAuth: "",
     };
   },
   mounted() {
     this.loadBeer();
     this.loadProfile();
+  },
+  updated() {
+    this.isAuth = localStorage.getItem("isAuth");
   },
   methods: {
     loadBeer() {
