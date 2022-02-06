@@ -1,0 +1,138 @@
+$color-first: #5a202a;
+$color-second: #fecc52;
+body {
+  margin: 0;
+  height: 100%;
+  min-height: 100vh;
+  background: url(assets/background.jpg) center / cover no-repeat;
+
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(255, 184, 77);
+  border-bottom: $color-first 2px solid;
+  &__beer {
+    margin-right: 15px;
+    &_link {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__logo {
+    margin: 5px 10%;
+    width: 90%;
+    max-width: 200px;
+  }
+  &__profile {
+    margin-right: 5%;
+
+    &_link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $color-first;
+    }
+    &_username {
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    &_avatar {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: $color-first 2px solid;
+      background-color: white;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+.page {
+  color: #5a202a;
+  margin: 5% auto 10% auto;
+  max-width: 700px;
+
+  background-color: $color-second;
+  border-radius: 30px;
+  border: $color-first 2px solid;
+  box-shadow: #000 0 0 50px;
+
+  padding: 20px;
+  @media (max-width: 768px) {
+    margin: 5% 10% 15% 10%;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  &__list {
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgb(0, 0, 0, 0.1) 2px solid;
+  }
+  &__item:last-child {
+    border-bottom: none;
+  }
+  &__property {
+    flex-shrink: 0;
+    max-width: 200px;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      flex-shrink: 1;
+    }
+  }
+  &__value {
+    max-width: 300px;
+    text-align: right;
+  }
+  &__property,
+  &__value {
+    margin: 15px 20px;
+    line-height: 25px;
+    @media (max-width: 768px) {
+      margin: 5px 7px;
+    }
+  }
+  &__button {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 70px;
+    background-color: $color-second;
+    border: $color-first 2px solid;
+    border-radius: 20px;
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: $color-first;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    &:hover {
+      border: $color-first 3px solid;
+      box-shadow: white 0 0 10px;
+      background-color: #ffd25f;
+    }
+    &:active {
+      transform: scale(0.99);
+      background-color: #f5c650;
+    }
+  }
+}
