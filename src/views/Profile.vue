@@ -3,7 +3,7 @@
     <div class="page">
       <div class="title">
         <h1>You profile</h1>
-        <img class="title__avatar" :src="link" width="150px" height="150px" />
+        <img class="title__avatar" :src="link" />
       </div>
       <ul class="page__list">
         <li
@@ -40,9 +40,13 @@ export default {
   align-items: center;
   justify-content: space-around;
   &__avatar {
+    max-width: 150px;
+    max-height: 150px;
+    width: 40%;
     border: #5a202a 2px solid;
     border-radius: 20px;
     background-color: #fff;
+    margin: 5px;
   }
 }
 .page {

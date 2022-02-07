@@ -61,7 +61,7 @@ body {
 }
 .page {
   color: #5a202a;
-  margin: 5% auto 10% auto;
+  margin: 5vh auto 10vh auto;
   max-width: 700px;
 
   background-color: $color-second;
@@ -71,12 +71,16 @@ body {
 
   padding: 20px;
   @media (max-width: 768px) {
-    margin: 5% 10% 15% 10%;
+    margin: 5vh 10% 15vh 10%;
   }
   h1 {
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin: 5px;
+    }
   }
   &__list {
     padding: 0;

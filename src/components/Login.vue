@@ -51,7 +51,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 25vh;
   box-shadow: #000 0 0 20px;
   input {
     width: 50%;
@@ -67,15 +67,24 @@ export default {
     border-radius: 15px;
     padding: 10px;
     margin: 15px 20px 15px 20px;
-    @media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
+    input {
+      width: 70%;
+    }
+    &__button {
       width: 120px;
       height: 50px;
+      margin: 5px 10px 5px 0;
     }
   }
   @media (max-height: 768px) {
-    margin-top: 2%;
+    margin-top: 5vh;
     h1 {
-      margin: 7px;
+      margin: 5px;
+    }
+    &__button {
+      margin: 5px 10px 5px 0;
     }
   }
 }
